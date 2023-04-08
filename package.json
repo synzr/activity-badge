@@ -1,0 +1,21 @@
+{
+  "name": "activity-badge",
+  "version": "0.0.0",
+  "description": "Generate GitHub badges based on your activity",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": {
+    "email": "sora@synzr.ru",
+    "name": "Mikhail Serebryakov",
+    "url": "https://synzr.ru"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "standard": "^17.0.0"
+  }
+}
