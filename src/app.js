@@ -1,4 +1,6 @@
 const express = require('express')
+const { engine: handlebars } = require('express-handlebars')
+
 const { npmDistMiddleware } = require('./middlewares/npm-dist')
 
 class Application {
@@ -26,11 +28,18 @@ class Application {
 
     app.set('cache', this.cache)
 
-    app.get('/', (req, res) => res.send('Hello world!'))
+    app.engine('handlebars', handlebars())
+
+    app.set('view engine', 'handlebars')
+    app.set('views', './views')
+
+    app.get('/', (req, res) => res.render('index', { environment: this.environment }))
 
     app.use(
-      '/static/npm/:package/dist/*',
-      npmDistMiddleware(['htmx.org', 'bootstrap'])
+      '/node_modules/:package/dist/*',
+      npmDistMiddleware([
+        'htmx.org', 'bootstrap', 'handlebars'
+      ])
     )
 
     return app
