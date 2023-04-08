@@ -1,6 +1,6 @@
 {
   "name": "activity-badge",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Generate GitHub badges based on your activity",
   "main": "server.js",
   "scripts": {
@@ -19,6 +19,8 @@
     "standard": "^17.0.0"
   },
   "dependencies": {
+    "cache-manager": "^5.2.0",
+    "cache-manager-redis-yet": "^4.1.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^7.0.3"
