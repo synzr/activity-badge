@@ -1,3 +1,5 @@
+const path = require('path')
+
 const express = require('express')
 const { engine: handlebars } = require('express-handlebars')
 
@@ -41,6 +43,9 @@ class Application {
         'htmx.org', 'bootstrap', 'handlebars'
       ])
     )
+    app.use('/static', express.static(
+      path.join(process.cwd(), 'static')
+    ))
 
     return app
   }

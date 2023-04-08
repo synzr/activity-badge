@@ -1,0 +1,13 @@
+.index-title {
+  background: #f09819;
+  background: -webkit-linear-gradient(to right, #f09819, #edde5d);
+  background: linear-gradient(to right, #f09819, #edde5d);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font-size: 48px;
+  user-select: none;
+}

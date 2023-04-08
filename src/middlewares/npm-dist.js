@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const process = require('process')
 
 const npmDistMiddleware = (allowedPackages) => {
   return (req, res, next) => {
